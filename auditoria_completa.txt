@@ -1,0 +1,126 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20261112225102
+Nombre de usuario: DESKTOP-G15J6TA\Tati
+Usuario RunAs: DESKTOP-G15J6TA\Tati
+Nombre de la configuración: 
+Máquina: DESKTOP-G15J6TA (Microsoft Windows NT 10.0.19045.0)
+Aplicación host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Id. de proceso: 20944
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+La transcripción ha comenzado. El archivo de salida es C:\Users\Tati\Desktop\auditoria_completa.txt
+PS C:\Users\Tati> cd $HOME\Desktop
+PS C:\Users\Tati\Desktop> mkdir Sistema_Ventas
+
+
+    Directorio: C:\Users\Tati\Desktop
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        12/11/2026     22:51                Sistema_Ventas
+
+
+PS C:\Users\Tati\Desktop> cd Sistema_Ventas
+PS C:\Users\Tati\Desktop\Sistema_Ventas> mkdir Frontend, Backend, BaseDatos
+
+
+    Directorio: C:\Users\Tati\Desktop\Sistema_Ventas
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        12/11/2026     22:51                Frontend
+d-----        12/11/2026     22:51                Backend
+d-----        12/11/2026     22:51                BaseDatos
+
+
+PS C:\Users\Tati\Desktop\Sistema_Ventas> echo "Version 1.0 del Sistema de Ventas" > README.md
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="Version 1.0 del Sistema de Ventas"
+PS C:\Users\Tati\Desktop\Sistema_Ventas> git init
+Initialized empty Git repository in C:/Users/Tati/Desktop/Sistema_Ventas/.git/
+PS C:\Users\Tati\Desktop\Sistema_Ventas> git add .
+
+PS C:\Users\Tati\Desktop\Sistema_Ventas> git push -u origin main
+git remote add origin https://github.com/mtatianavazquez/Sistema-ventas.git
+git branch -M main
+git commit -m "Día 1: Despliegue de la estructura base"
+error: src refspec main does not match any
+error: failed to push some refs to 'origin'
+
+
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Tati@DESKTOP-G15J6TA.(none)')
+PS C:\Users\Tati\Desktop\Sistema_Ventas> git config --global user.email m.tatianavazquez@gmail.com
+
+PS C:\Users\Tati\Desktop\Sistema_Ventas> git config --global user.name Tatiana Vazquez
+
+PS C:\Users\Tati\Desktop\Sistema_Ventas> git commit -m "Dia 1: Despliegue de la estructura base"
+[main (root-commit) 065a783] Dia 1: Despliegue de la estructura base
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+PS C:\Users\Tati\Desktop\Sistema_Ventas> git push -u origin main
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 292 bytes | 41.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/mtatianavazquez/Sistema-ventas.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\Tati\Desktop\Sistema_Ventas> echo "Conectando al servidor SQL..." > BaseDatos\conexion.ps1
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="Conectando al servidor SQL..."
+PS C:\Users\Tati\Desktop\Sistema_Ventas> echo "Actualizacion Dia 2: Modulo DB agregado" >> README.md
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="Actualizacion Dia 2: Modulo DB agregado"
+PS C:\Users\Tati\Desktop\Sistema_Ventas> mkdir Pruebas_Unitarias
+
+
+    Directorio: C:\Users\Tati\Desktop\Sistema_Ventas
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        12/11/2026     23:12                Pruebas_Unitarias
+
+
+PS C:\Users\Tati\Desktop\Sistema_Ventas> git add .
+
+PS C:\Users\Tati\Desktop\Sistema_Ventas> git commit -m "Día 2: Agregados scripts de DB y carpeta de pruebas"
+[main 88b5115] Día 2: Agregados scripts de DB y carpeta de pruebas
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 BaseDatos/conexion.ps1
+PS C:\Users\Tati\Desktop\Sistema_Ventas> git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 534 bytes | 133.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/mtatianavazquez/Sistema-ventas.git
+   065a783..88b5115  main -> main
+PS C:\Users\Tati\Desktop\Sistema_Ventas> Stop-Transcript
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20261112231304
+**********************
